@@ -1,0 +1,240 @@
+:root {
+  --dark-bg: #1f2937;
+  --hero-secondary: #e5e7eb;
+  --blue-accent: #3882f6;
+  --text-dark: #1f2937;
+  --text-light: #f9faf8;
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-background {
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  padding-bottom: 80px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo img {
+  width: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: var(--hero-secondary);
+  text-decoration: none;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+  gap: 40px;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  color: var(--hero-secondary);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+}
+
+.btn-primary {
+  background-color: var(--blue-accent);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.info-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.info-section h2 {
+  font-size: 32px;
+  color: var(--text-dark);
+  margin-bottom: 40px;
+}
+
+.info-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+card {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box img {
+  width: 150px;
+  height: 130px;
+  background-color: var(--blue-accent);
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #4b5563;
+  font-size: 14px;
+  text-align: center;
+}
+
+.testimonial-section {
+  background-color: var(--hero-secondary);
+  padding: 80px 20px;
+}
+
+.testimonial-content {
+  max-width: 700px;
+}
+
+.quote {
+  font-size: 32px;
+  font-style: italic;
+  color: var(--text-dark);
+  font-weight: 300;
+}
+
+.author {
+  text-align: right;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/* --- CTA Section --- */
+.cta-section {
+  padding: 80px 20px;
+}
+
+.cta-box {
+  background-color: var(--blue-accent);
+  border-radius: 12px;
+  padding: 40px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+/* --- Footer --- */
+.footer {
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  text-align: center;
+  padding: 30px 0;
+}
